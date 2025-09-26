@@ -2,39 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Nature-inspired design system for educational website
+All colors MUST be HSL for proper theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Nature-inspired color palette */
+    --background: 240 100% 99%;
+    --foreground: 210 22% 22%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 22% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 22% 22%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sky blue primary */
+    --primary: 200 100% 70%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft cloud secondary */
+    --secondary: 240 20% 96%;
+    --secondary-foreground: 210 22% 22%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Natural green accent */
+    --accent: 120 60% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Hill green variant */
+    --nature-green: 100 80% 35%;
+    --nature-green-foreground: 0 0% 100%;
+
+    /* Muted sky tones */
+    --muted: 220 30% 95%;
+    --muted-foreground: 220 15% 50%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 30% 88%;
+    --input: 220 30% 88%;
+    --ring: 200 100% 70%;
+
+    /* Beautiful gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(200 100% 80%), hsl(220 70% 90%));
+    --gradient-nature: linear-gradient(135deg, hsl(120 60% 45%), hsl(100 80% 35%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 20% 98%));
+
+    /* Elegant shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(200 100% 70% / 0.15);
+    --shadow-nature: 0 8px 30px -4px hsl(120 60% 45% / 0.2);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -56,33 +77,45 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Nature dark theme with deep sky tones */
+    --background: 220 30% 8%;
+    --foreground: 220 20% 85%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 30% 10%;
+    --card-foreground: 220 20% 85%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 30% 10%;
+    --popover-foreground: 220 20% 85%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 30% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 30% 15%;
+    --secondary-foreground: 220 20% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 120 60% 40%;
+    --accent-foreground: 220 30% 8%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --nature-green: 100 70% 30%;
+    --nature-green-foreground: 220 30% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 220 15% 60%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 220 30% 8%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 200 100% 60%;
+
+    /* Dark theme gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(220 50% 15%), hsl(200 70% 20%));
+    --gradient-nature: linear-gradient(135deg, hsl(120 60% 25%), hsl(100 70% 20%));
+    --gradient-card: linear-gradient(145deg, hsl(220 30% 12%), hsl(220 30% 8%));
+
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-nature: 0 8px 30px -4px hsl(120 60% 30% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
